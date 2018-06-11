@@ -40,8 +40,8 @@ listItems.forEach(function(item){
 // 	newInput.appendChild(newContent);
 // }
 // console.log(ul)
-const input = document.createElement("input")
-document.body.appendChild(input)
+// const input = document.createElement("input")
+// document.body.appendChild(input)
 
 // and a `<button>Add Todo</button>` HTML element.
 // const button = document.createElement("button")
@@ -58,13 +58,20 @@ document.body.appendChild(input)
 // const newItem = document.querySelector("input")
 // }
 // console.log(input)
-const newitem = document.querySelector('input').value
 
 // getInput.forEach(function(item) { 
-	const newItem = document.createElement('li')
-	// const button = document.querySelector("#button");
-	// newItem.textContent = item
+	
+	const button = document.querySelector("#add-todo");
+	
 	button.addEventListener("click", function() {
+		// 1. create element
+		const newItem = document.createElement('li')
+		
+		// 2. set value of element
+		const userInputValue = document.querySelector('input').value
+		newItem.textContent = userInputValue
+		
+		// 3. append element to parent
 		ul.appendChild(newItem);
 	})
 // };
