@@ -17,3 +17,24 @@ ul {
 ul li {
 	padding: 1rem 0;
 }
+
+.done {
+	text-decoration: line-through
+}
+
+#button {
+	font-size: 24px;
+	border: none;
+	background-color: orange;
+	padding: 5px 10px;
+	display: inline-block;
+	color: white;
+	border-radius: 5px;
+
+}
+
+input {
+	font-size: 24px;
+	border: 1px solid rgb(163, 161, 161);
+	border-radius: 5px;
+}
