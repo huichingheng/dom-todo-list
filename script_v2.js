@@ -27,11 +27,11 @@ tasks.forEach(createTask);
 const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
-  const newTask = document.querySelector("input");
+  const newTask = document.querySelector("#new-input");
   if (newTask.value !== " ") {
     tasks.push(newTask.value);
     createTask(tasks[tasks.length - 1]);
-    input.value = "";
+    newTask.value = "";
   }
 });
 
