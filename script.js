@@ -34,36 +34,21 @@ listItems.forEach(function(item){
 // - Add a `<input>` HTML element 
 // document.body.onload = addElement;
 
-// function addElement() {
-// 	const newInput = document.createElement("input");
-// 	const newContent = document.createTextNode("add to do");
-// 	newInput.appendChild(newContent);
-// }
-// console.log(ul)
-// const input = document.createElement("input")
-// document.body.appendChild(input)
 
 // and a `<button>Add Todo</button>` HTML element.
-// const button = document.createElement("button")
-// // const textContent = document.createTextNode("Add Todo")
-// document.body.appendChild(button)
+
 
 // - Add a 'click' event listener to the button that adds the value of the
 //   `<input>` element as a new todo in the `ul#todo-list` (follow the 3 steps for
 //   creating and appending a new DOM element - (i) `createElement`, (ii) change
 //   any attributes if necessary, (iii) use `appendChild` to append it to the
 //   appropriate HTML element)
-// get input from user
-// function getInput() {
-// const newItem = document.querySelector("input")
-// }
-// console.log(input)
-
-// getInput.forEach(function(item) { 
 	
 	const button = document.querySelector("#add-todo");
 	
-	button.addEventListener("click", function() {
+	button.addEventListener("click", function(e) {
+		e.preventDefault()
+
 		// 1. create element
 		const newItem = document.createElement('li')
 		
@@ -73,6 +58,8 @@ listItems.forEach(function(item){
 		
 		// 3. append element to parent
 		ul.appendChild(newItem);
+
+		document.querySelector("#newInput").value = ""
 	})
 // };
 
@@ -80,9 +67,4 @@ listItems.forEach(function(item){
 // - Add css styling and make this a nice todo list that you can show off!
 
 // - Bonus: Allow user to create a todo when they press the <kbd>Enter</kbd> key
-const x = document.querySelector("input")
-
-function y() {
-	const keyboardEnter = document.createElement('kbd');
-
-}
+document.query
